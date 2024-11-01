@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: #4e342e;
+    background-color: #fdf3e7;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+header {
+    background: #8d6e63;
+    color: #fdf3e7;
+    padding: 20px 0;
+    position: relative;
+}
+
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul li {
+    margin: 0 15px;
+}
+
+
+nav ul li a {
+    color: #fdf3e7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+nav ul li a:hover {
+    color: #ffcc80;
+}
+
+
+.hero {
+    background: #ffcc80;
+    color: #4e342e;
+    text-align: center;
+    padding: 60px 0;
+}
+
+
+.hero h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+.hero .btn {
+    background: #8d6e63;
+    color: #fdf3e7;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+
+.hero .btn:hover {
+    background: #a1887f;
+}
+
+
+.products {
+    margin: 50px 0;
+}
+
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #4e342e;
+}
+
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.product {
+    background: #fff8e1;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #d7ccc8;
+    border-radius: 5px;
+    margin: 15px;
+    flex: 1;
+    min-width: 250px;
+}
+
+
+.product img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+.product h3 {
+    color: #4e342e;
+    margin-bottom: 10px;
+}
+
+
+.product p {
+    color: #6d4c41;
+    font-size: 1.1rem;
+}
+
+
+footer {
+    background: #8d6e63;
+    color: #fdf3e7;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+footer p {
+    margin: 0;
+}
+
+
+.cart {
+    font-size: 1 rem;
+}
+
+
+.cart a {
+    color: #fdf3e7;
+    text-decoration: none;
+}
+
+
+.cart a:hover {
+    color: #ffcc80;
+}
+
+
+.auth-links {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+
+.auth-links a {
+    color: #fdf3e7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.auth-links a:hover {
+    color: #ffcc80;
+}
+/* Existing CSS here */
+
+
+/* Base styles for the navigation menu */
+nav ul.main-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav ul.main-menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+
+nav ul.main-menu li a {
+    color: #fdf3e7;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+nav ul.main-menu li a:hover {
+    color: #ffcc80;
+}
+
+
+/* Submenu styles */
+nav ul.submenu {
+    display: none;
+    position: absolute;
+    background-color: #8d6e63;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+
+nav ul.submenu li {
+    margin: 0;
+}
+
+
+nav ul.submenu li a {
+    color: #fdf3e7;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+
+nav ul.submenu li a:hover {
+    background-color: #ffcc80;
+    color: #4e342e;
+}
+
+
+/* Display the submenu on hover */
+nav ul.main-menu li.has-submenu:hover > ul.submenu {
+    display: block;
+}
+
+
+/* Responsive menu */
+@media (max-width: 768px) {
+    nav ul.main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul.submenu {
+        position: static;
+        padding-left: 20px;
+    }
+}
